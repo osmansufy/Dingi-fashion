@@ -1,4 +1,4 @@
-import Axios from 'axios';
+import Axios from '../axios';
 import React, { useEffect, useState } from 'react';
 import SinglePreOrder from '../component/SinglePreOrder';
 
@@ -6,7 +6,7 @@ function PreOrder(props) {
   const [preOrders,setPreOrders]=useState([])
 
   const getPreOrders=async()=>{
-    Axios.get('https://api.dailyplus.store/v0/catalogue/product/public/?pre_order=1').then(response=>{
+    Axios.get('catalogue/product/public/?pre_order=1').then(response=>{
       setPreOrders(response.data)
     })
   }
@@ -21,12 +21,17 @@ getPreOrders()
                 <h3 className="section-title">Pre-Order Products</h3>
                 </div>
               </div>
-              <div className="row">
+              {
+                preOrders?.length>0 ? 
+                <div className="row">
                 {preOrders && preOrders.map((item,index)=>(
                   <SinglePreOrder data={item} key={index} />
 
                 ))}
                 </div>
+                : <h5 className="text-center bg-primary my-2 py-5">Not Found Any PreOrder Products </h5>
+              }
+          
             </div>
           </section>
     );

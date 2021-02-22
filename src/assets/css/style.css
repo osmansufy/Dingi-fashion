@@ -1,10 +1,14 @@
 :root{
-    --primary-color: #5EC401;
-    --secondary-color: #F37A20;
+    --primary-color:#F9A602;
+  
+    --secondary-color:#211D1A;
     --text-color:#3C4B52;
     --border-radius:6px;
     --icon-color: #3C4B52;
     --card-bg: #F4F4F5;
+}
+.bg-primary{
+    background-color: var(--primary-color) !important;
 }
 p{
     margin: 0;
@@ -35,24 +39,11 @@ ul{
 ul li{
     padding-bottom: 10px;
 }
-ul li a {
-    color: rgba(55, 71, 79, 0.72) !important;
-    font-size: 0.9em ;
-    display: flex;
-    align-items: center;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    letter-spacing: 0px;
-    text-align: left;
-}
 
 section {
     padding: 30px 0px;
 }
-footer{
-    padding: 30px 0px;
-}
+
 .icon{
     color: var(--icon-color);
 }
@@ -233,7 +224,7 @@ header .logo-holder .logo{
 
 .add-to-bag-btn {
     color: var(--primary-color) ;
-    background-color: transparent;
+    background-color: var(--secondary-color);
     border: 2px solid #f6f6f65c;
     width: 100%;
     font-family: Poppins;
@@ -299,9 +290,6 @@ color: #5EC401;
 .pre-order-btn{
     margin-top: -5px;
 }
-footer{
-    background-color: #F5F5F5;
-}
 .social{
     display: flex;
 }
@@ -319,15 +307,8 @@ footer{
 .social .box .fa{
     font-size: 20px;
 }
-.fa-facebook{
-    color: #3b5998;
-}
-.fa-twitter{
-    color: #00acee;
-}
-.fa-instagram{
-    color: #d6249f;
-}
+
+
 .lighten-3{
     background-color: var(--primary-color);
 }
@@ -402,7 +383,7 @@ body{
     top: 60%;
     border-bottom-left-radius: var(--border-radius);
     border-top-left-radius: var(--border-radius);
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     z-index: 19;
     width: 80px;
     padding: 10px 10px;
@@ -1008,8 +989,8 @@ body{
 .search .input-group input{
     position: relative;
     /* text-indent: 35px; */
-    border: 1px solid var(--primary-color);
-    border-radius: var(--border-radius) !important;
+    /* border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius) !important; */
 }
 .search-icon{
     position: absolute;
@@ -1019,21 +1000,6 @@ body{
 }
 .search-icon .fa-search{
     color: var(--primary-color);
-}
-.search-container{
-    position: absolute;
-    top: 45px;
-    width: 500px;
-    height: auto;
-    background-color: #FFF;
-    z-index: 77;
-    -webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.75);
-    box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.75);
-    padding: 30px 15px;
-}
-.popular-search{
-    
 }
 
 /* result not found css */
@@ -1458,3 +1424,15 @@ input[type="text"]::placeholder {
 }
 
 
+.search-container{
+    position: absolute;
+    top: 45px;
+    width: 500px;
+    height: auto;
+    background-color: #FFF;
+    z-index: 77;
+    -webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.75);
+    padding: 30px 15px;
+}

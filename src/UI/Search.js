@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import Axios from "axios";
+import Axios from "../axios";
 import "./search.css";
 import bagIcon from "../assets/img/bag_white.png";
 import genieImg from "../assets/img/Genie.png";
@@ -25,7 +25,7 @@ const Search = (props) => {
           const query = searchEnter.length === 0 ? "" : `?token=${searchEnter}`;
 
           Axios.get(
-            "https://api.dailyplus.store/v0/catalogue/product/public/" + query
+            "catalogue/product/public/" + query
           ).then((response) => {
             setsearchResult(response.data);
             setShowResult(true);
@@ -146,7 +146,7 @@ const Search = (props) => {
               <div className="genieImg my-2">
                 <img src={genieImg} />
               </div>
-              <div className="genieinfo">
+              <div className="genieinfo my-2">
                 <h5>Didn’t find the product you’re looking for? Ask Genie!</h5>
                 <p>Genie will deliver it to your address.</p>
                 <p className="genip">
@@ -172,7 +172,7 @@ const Search = (props) => {
       {/* <span onClick={onSearchClose} className="search-close">
         ×
       </span> */}
-      <div className="input-group search-custom md-form form-sm form-2 border-0 pl-0">
+      {/* <div className="input-group search-custom md-form form-sm form-2 border-0 pl-0">
         <div className="input-group-prepend">
           <span className="input-group-text border-0 bg-none" id="basic-addon1">
             <i className="fa fa-search text-grey" aria-hidden="true" />
@@ -186,10 +186,21 @@ const Search = (props) => {
           type="search"
           placeholder="Search Products"
         />
-        {/* <span className="custom-serach" id="basic-text1"><i className="fa fa-search text-grey" aria-hidden="true" /></span>
-      <div className="input-group-append">
-      </div> */}
-      </div>
+    </div> */}
+      <div class="input-group mb-3 solveaz-search">
+  <div class="input-group-prepend bg-warning px-4 d-flex align-items-center ">
+  <i className="fa fa-search text-grey" aria-hidden="true" />
+  </div>
+  <input className=" form-control my-0 py-md-1 border-0 "
+          ref={inputRef}
+          value={searchEnter}
+          onChange={(event) => setSearchEnter(event.target.value)}
+          type="search"
+          placeholder="Search Products"/>
+</div>
+
+      
+      
       {/* Search Result */}
       {products}
     </div>

@@ -19,7 +19,7 @@
 } */
 
 .btn.is-active, .btn:hover {
-  background-color: #5EC401;
+  background-color: var(--primary-color);
 }
 .product_modal.close{
     position: fixed;

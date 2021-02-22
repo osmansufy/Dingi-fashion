@@ -74,29 +74,31 @@ return ( <>
             <div className="container">
               <div className="row">
                 <div className="col-md-6 col-sm-6 col-6">
-                  <h3 className="section-title">Popular Items</h3>
+                  <h3 className="section-title font-weight-bold">Popular Items</h3>
                 </div>
                 <div className="col-md-6 col-sm-6 col-6">
                   <button className="btn btn-padding btn-primary section-button float-right">View All Products</button>
                   <a className="mobile-link">See All</a>
                 </div>
               </div>
-              <Slider {...settings}>
-
-                
-              {props.productLists && props.productLists.map((item) => (
+             <div className="row">
+             {props.productLists && props.productLists.map((item) => (
        
 
               
-            <SinglePopuler
-            containerClass="mx-1 mt-4"
-              //  clicked={()=>productHandler(item)}
-               data={item} key={item.id}/>
-      
-              )
-              )}
+       <SinglePopuler
+       containerClass="col-md-2 col-6  my-3"
+         //  clicked={()=>productHandler(item)}
+          data={item} key={item.id}/>
+ 
+         )
+         )}
+             </div>
+
+                
+            
                   
-               </Slider>
+             
             </div>
             
           </section>

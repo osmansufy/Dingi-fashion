@@ -150,12 +150,12 @@ const GenieForm = () => {
       
          }
      
-        let imgUp= <div className="imgbtn" onClick={()=>inputRef.current.click()} ><img src={cammera} />
+        let imgUp= <div className="imgbtn d-flex justify-content-center     align-items-center flex-column" onClick={()=>inputRef.current.click()} ><img src={cammera} />
         <h5 className="text-center">Upload Images here</h5>
         </div>
         
         if(preview){
-            imgUp=<div className="imgbtn noc"><span onClick={onCloseImg}>X</span> <img src={preview} /></div>
+            imgUp=<div className="imgbtn d-flex justify-content-center     align-items-center flex-column noc"><span onClick={onCloseImg}><a >X</a> </span> <img src={preview} /></div>
         }
          const formElementsArray = [];
          for (let key in orderForm) {

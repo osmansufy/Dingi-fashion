@@ -58,16 +58,15 @@ console.log(props);
       }
     }
     return (<>
-        <div className="col-lg-2 col-sm-3 col-6 mt-4">
+        <div className=" col-sm-3 col-6 mt-4">
                   <div className="product-card">
                     
                      {/* <img className="product-img" loading="lazy" 
                      width="150" height="150" 
                      src={props.data.image_list[0].thumbnail_image_url} alt="product-img" /> */}
-                       <LoadingImage 
+                <div className="product-img d-flex justify-content-center">    <LoadingImage 
            emptyImg={emptyImg}
            className="product-img"
-           width="150" height="150" 
             realImage={
               props.data?.image_list[0]?.thumbnail_image_url ?
               props.data.image_list[0].thumbnail_image_url :
@@ -76,6 +75,7 @@ console.log(props);
               emptyImg
             
             }/>
+            </div>   
                    
     <h6 className= "pro-title mt-2">{props.data.name}</h6>
                     <div className="delivery-price">

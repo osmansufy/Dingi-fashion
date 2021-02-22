@@ -1,7 +1,7 @@
 import React, { useEffect ,useState} from 'react';
 import axios from 'axios'
 import classes from './Sidebar.Module.css'
-import logo from '../assets/img/logo.png'
+import logo from '../assets/img/logo-solveaz.png'
 import { Link,withRouter} from 'react-router-dom';
 import Spinner from '../container/Spinner/Spinner'
 import emptyImg from "../assets/img/emptyImg.png";
@@ -25,7 +25,7 @@ const Sidebar=props=>{
           <div className="sidebar">
             {/* Sidebar user panel (optional) */}
             <div className="user-panel     align-items-center mt-3 pb-3 mb-3 justify-content-between d-flex">
-              <div className="image">
+              <div className="image logo-container">
                 <Link onClick={props.closed} to="/"> <img src={logo}alt="logo" /></Link>
               </div>
 

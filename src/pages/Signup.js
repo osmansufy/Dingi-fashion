@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import * as authAction from "../store/actions/actionAuth";
 import Spinner from '../container/Spinner/Spinner'
 import { Redirect } from "react-router-dom";
-import axios from "axios";
+import axios from "../axios";
 import EmailForm from "../component/SignUp/EmailForm";
 const Signup = () => {
   const dispatch = useDispatch();
@@ -140,7 +140,7 @@ const Signup = () => {
 
     formData.append("phone", `+${formState.userInfo.phone}`);
     setloading(true)
-    axios.post("https://api.dailyplus.store/v0/user/check-number/", formData)
+    axios.post("user/check-number/", formData)
       .then((response) => {
         setloading(false)
         if (response.status == 200) {
@@ -295,7 +295,7 @@ const Signup = () => {
 
       axios
         .post(
-          "https://api.dailyplus.store/v0/user/password/change/otp/",
+          "user/password/change/otp/",
           formdata
         )
         .then((response) => {

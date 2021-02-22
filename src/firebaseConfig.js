@@ -2,16 +2,18 @@ import firebase from "firebase"
 
 
 const firebaseConfig={
-    apiKey: "AIzaSyDcECPNsQwdFojqHxY6AXO_QcwRBby29pw",
-    authDomain: "daily-plus-65b30.firebaseapp.com",
-    databaseURL: "https://daily-plus-65b30.firebaseio.com",
-    projectId: "daily-plus-65b30",
-    storageBucket: "daily-plus-65b30.appspot.com",
-    messagingSenderId: "180447814007",
-    appId: "1:180447814007:web:aee8694d85a2a7c4fc8172",
-    measurementId: "G-V5FCNX71M4"
+    apiKey: "AIzaSyCkP6u-0PDA_6qi4LqVmWSYHjEBj_cr8K4",
+    authDomain: "jeanhive-b5e01.firebaseapp.com",
+    projectId: "jeanhive-b5e01",
+    storageBucket: "jeanhive-b5e01.appspot.com",
+    messagingSenderId: "328878961727",
+    appId: "1:328878961727:web:16432a1ea275e36da1748a",
+    measurementId: "G-R0BQJE19J9"
+
 
 }
+
+
 firebase.initializeApp(firebaseConfig);
 
 export default firebase

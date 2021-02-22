@@ -1,16 +1,15 @@
 
 import React, { Component } from 'react';
-import axios from 'axios'
+import axios from '../axios'
 import SingleCategory from '../component/SingleCategory';
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+
 import Slider from "react-slick";
 class Category extends Component {
     state={
         categories:[]
     }
     componentDidMount(){
-        axios.get('https://api.dailyplus.store/v0/catalogue/category/').then(response=>{
+        axios.get('catalogue/category/').then(response=>{
            
             this.setState({categories:response.data})
           

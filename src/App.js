@@ -7,7 +7,8 @@ import "./App.css";
 import "./assets/css/style.css";
 import "./assets/css/custom.css";
 import "./assets/css/responsive.css";
-
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 // import Home from './pages/Home'
 // import Sidebar from "./container/Sidebar";
 import Header from "./container/Header";
