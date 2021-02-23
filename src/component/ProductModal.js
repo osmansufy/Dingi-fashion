@@ -136,6 +136,7 @@ let discount=details && details.inventory_list && details.inventory_list[0] && d
       aria-labelledby="contained-modal-title-vcenter"
       centered
       className="product-modal"
+      contentClassName="bg-secondary-custom"
     >
       {/* <div className={attachClasses.join(' ')} > */}
 
@@ -146,7 +147,7 @@ let discount=details && details.inventory_list && details.inventory_list[0] && d
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-sm-6 col-12">
-              <div className="single-product-img shadow-lg mb-3">
+              <div className="single-product-img  shadow-lg mb-3">
         
                 
            <LoadingImage 

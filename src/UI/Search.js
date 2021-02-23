@@ -2,9 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Axios from "../axios";
 import "./search.css";
 import bagIcon from "../assets/img/bag_white.png";
-import genieImg from "../assets/img/Genie.png";
-import genielamp from "../assets/img/genie-lamp.png";
-import GenieSmall from "../assets/img/GenieSmall.png";
+
 import info from "../assets/img/info_24px.png";
 import Spinner from "../container/Spinner/Spinner";
 import { useHistory } from "react-router";
@@ -38,11 +36,7 @@ const Search = (props) => {
       };
     }
   };
-  const onGenieForm = () => {
-    history.push("/genie/form");
-    // setShowResult(false)
-    setSearchEnter("");
-  };
+ 
   useEffect(() => {
     getPreOrders();
   }, [searchEnter, inputRef]);
@@ -61,7 +55,7 @@ const Search = (props) => {
     products = (
       <div className="search-container" id="searchContainer">
         <div className="search-result" id="searchResult">
-          <h6 className="mb-4">Search Result </h6>
+          <h4 className="mb-4">Search Result </h4>
           {searchResult.length > 0 ? (
             <ul>
               {searchResult.map((product) => (
@@ -104,63 +98,12 @@ const Search = (props) => {
                     </a>
                     <hr />
                   </li>
-                  {(product.inventory_list[0] &&
-                    product.inventory_list[0].status == 3) ||
-                  (product.inventory_list[0] &&
-                    product.inventory_list[0].status == 4) ? (
-                    <li className="my-2">
-                      <a
-                        onClick={onGenieForm}
-                        className="d-flex justify-content-between"
-                      >
-                        <img src={GenieSmall} className="mr-3" />
-                        <div className="newGenieInfo">
-                          <h4>
-                            Didn’t find the product you’re looking for? Ask
-                            Genie!
-                          </h4>
-                          <p>Genie will deliver it to your address.</p>
-                          <div className="d-flex justify-content-around">
-                            <button
-                              type="button"
-                              className="btn btn-genie w-75 btn-warning"
-                            >
-                              <img src={genielamp} />
-                              <span className="flex-grow-1">
-                                Ask Genie
-                              </span>{" "}
-                            </button>
-                            <img src={info} />
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                  ) : (
-                    ""
-                  )}
+                 
                 </>
               ))}
             </ul>
           ) : (
-            <div className="d-flex flex-column justify-content-center align-items-center">
-              <div className="genieImg my-2">
-                <img src={genieImg} />
-              </div>
-              <div className="genieinfo my-2">
-                <h5>Didn’t find the product you’re looking for? Ask Genie!</h5>
-                <p>Genie will deliver it to your address.</p>
-                <p className="genip">
-                  You can also add out of stock product to Genie List.
-                </p>
-              </div>
-              <button
-                onClick={onGenieForm}
-                className="btn geniebtn w-80 mx-auto d-flex  align-items-center btn-primary"
-              >
-                <i className="fas fa-plus mr-2"></i>
-                <span>Add to Genie List</span>
-              </button>
-            </div>
+            <h5 className="text-center bg-primary my-2 py-5">Not Found Any Products </h5>
           )}
         </div>
         {/* Search End */}
@@ -188,10 +131,10 @@ const Search = (props) => {
         />
     </div> */}
       <div class="input-group mb-3 solveaz-search">
-  <div class="input-group-prepend bg-warning px-4 d-flex align-items-center ">
-  <i className="fa fa-search text-grey" aria-hidden="true" />
+  <div class="input-group-prepend radius-left bg-primary px-4 d-flex align-items-center ">
+  <i className="fa fa-search text-white" aria-hidden="true" />
   </div>
-  <input className=" form-control my-0 py-md-1 border-0 "
+  <input className=" form-control radius-right my-0 py-md-1 border-0 "
           ref={inputRef}
           value={searchEnter}
           onChange={(event) => setSearchEnter(event.target.value)}

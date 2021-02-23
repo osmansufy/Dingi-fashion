@@ -9,6 +9,7 @@ import storage from 'redux-persist/lib/storage' // defaults to localStorage for 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const persistConfig = {
     key: 'root',
+    version: 0,
     storage,
     whitelist:['auth','carts']
   }

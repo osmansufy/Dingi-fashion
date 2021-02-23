@@ -28,6 +28,7 @@ const PreOngoing = () => {
          })
          .catch(error=>{
              console.log(error)
+             setLoading(false)
          })
     },[])
 

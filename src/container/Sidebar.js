@@ -19,7 +19,7 @@ const Sidebar=props=>{
   }
     return (
        <>
-            <aside className={attachClasses.join(' ')} style={{background: '#FFFF', width:'300px' }}>
+            <aside className={attachClasses.join(' ')} >
           {/* Brand Logo */}
           {/* Sidebar */}
           <div className="sidebar">
@@ -43,7 +43,7 @@ const Sidebar=props=>{
                   <Link onClick={props.closed} to={"/category/"+cat.id+"/"+cat.name} className="nav-link align-items-center p-0 justify-content-between d-flex" >
                    <div className="d-flex align-items-center">
                    <img src={cat.thumbnail_image_url ?cat.thumbnail_image_url:emptyImg } alt="category-image" className="img-size-25 mr-3 rounded-circle" loading="lazy" />
-                    <p className="m-0">
+                    <p className={`m-0 ${classes.textCat}`}>
                       {cat.name}
                       
                     </p>

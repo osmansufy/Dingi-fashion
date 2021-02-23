@@ -42,17 +42,7 @@ const Notification = (props) => {
 console.log(props)
   const onShowNotification=(notification)=>{
     let id=""
-    if(notification.genie_list_order && !notification.order && !notification.pre_order ){
-      console.log(notification.id);
-      notificationRead(notification.id)
-      id=notification.genie_list_order 
-      history.push({
-        pathname: '/genie/order/info',
-       //  search: `?id=${id}`,
-        state: { id: id}
-    });
-    
-    }else if(!notification.genie_list_order && !notification.order && notification.pre_order){
+    if(!notification.order && notification.pre_order){
       id=notification.pre_order  
       history.push({
         pathname: '/order/preorder/info',
@@ -60,7 +50,7 @@ console.log(props)
         state: { id: id}
     });
     notificationRead(notification.id)
-    }else if(!notification.genie_list_order && notification.order && !notification.pre_order){
+    }else if(notification.order && !notification.pre_order){
       id=notification.order 
       history.push({
         pathname: '/order/info',

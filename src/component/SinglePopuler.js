@@ -118,12 +118,12 @@ const SinglePopuler = (props) => {
             : emptyImg}/>
             </a>
           </div>
-          <h6 className="pt-2 pro-title font-weight-bold">{props.data.name}</h6>
+          <h6 className="pt-2 pro-title mb-sm-1 font-weight-bold">{props.data.name}</h6>
           <div className="decription">
           <p>{props?.data?.description}</p>
         </div>
           <div className="price">
-            <h6 className="sell-price">
+            <h6 className="sell-price text-dark font-weight-bold">
             ৳{props.data.inventory_list[0].unit_price_final}{" "}
               <span className="regular-price">
                 {props.data?.inventory_list[0]?.discount

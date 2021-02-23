@@ -63,7 +63,7 @@ const Banner = (props) => {
       <Carousel.Item key={item.id}>
       <img src={item.secondary_banner} className="d-block img-fluid w-100" alt="banner-img" />
       <div className="banner-image-content">
-      <Button className="banner-button px-4 py-3 text-light" variant="warning">Shop Now</Button>{' '}
+      <Button className="banner-button px-4 py-3 text-light" variant="primary">Shop Now</Button>{' '}
       </div>
     </Carousel.Item>
     ))}

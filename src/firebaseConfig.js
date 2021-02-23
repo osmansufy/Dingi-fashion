@@ -2,13 +2,14 @@ import firebase from "firebase"
 
 
 const firebaseConfig={
-    apiKey: "AIzaSyCkP6u-0PDA_6qi4LqVmWSYHjEBj_cr8K4",
-    authDomain: "jeanhive-b5e01.firebaseapp.com",
-    projectId: "jeanhive-b5e01",
-    storageBucket: "jeanhive-b5e01.appspot.com",
-    messagingSenderId: "328878961727",
-    appId: "1:328878961727:web:16432a1ea275e36da1748a",
-    measurementId: "G-R0BQJE19J9"
+    apiKey: "AIzaSyDFso3q2ug2WkTJlDLW3jB0EW66gDT8p-Q",
+    authDomain: "solveaz-7cf34.firebaseapp.com",
+    projectId: "solveaz-7cf34",
+    storageBucket: "solveaz-7cf34.appspot.com",
+    messagingSenderId: "889958092755",
+    appId: "1:889958092755:web:47a4976b8b744cc6b5e926",
+    measurementId: "G-1DBHCJY93K"
+
 
 
 }

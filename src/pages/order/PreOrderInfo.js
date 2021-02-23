@@ -15,7 +15,7 @@ const PreOrderInfo = () => {
          <Container> 
 
        
-    <Modal.Dialog className="mx-auto my-0 " contentClassName="pt-5">
+    <Modal.Dialog className="mx-auto my-0 " contentClassName="pt-5 bg-secondary-custom">
     
     <Modal.Body >
      <Tab.Container id="left-tabs-example" defaultActiveKey="first">

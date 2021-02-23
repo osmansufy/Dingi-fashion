@@ -32,10 +32,8 @@ import AddAddress from "./component/Map/AddAddress";
 import PreOrderInfo from "./pages/order/PreOrderInfo";
 import PreOrderDetails from "./component/PreOrder/PreOrderDetails";
 import ProductId from "./pages/ProductId";
-// import Genie from './pages/Genie/Genie';
-import GenieForm from "./component/Genie/GenieForm";
-// import GenieOrderDetails from './component/Genie/GenieOrderDetails';
-// import AboutUs from './pages/About';
+
+
 import ChangePass from "./component/SignUp/ChangePass";
 import Spinner from "./container/Spinner/Spinner";
 const Home = React.lazy(() => import("./pages/Home"));
@@ -47,10 +45,8 @@ const OffersPage = React.lazy(() => import("./pages/Offers"));
 const CheckOut = React.lazy(() => import("./pages/CheckOut"));
 const User = React.lazy(() => import("./pages/User"));
 const Location = React.lazy(() => import("./pages/Location"));
-const Genie = React.lazy(() => import("./pages/Genie/Genie"));
-const GenieOrderDetails = React.lazy(() =>
-  import("./component/Genie/GenieOrderDetails")
-);
+
+
 const AboutUs = React.lazy(() => import("./pages/About"));
 const App = (props) => {
   const history = createBrowserHistory();
@@ -124,26 +120,10 @@ const App = (props) => {
           )}
         />
         <Route path="/order/preorder" exact component={PreOrderInfo} />
-        <Route
-          path="/genie"
-          exact
-          render={() => (
-            <Suspense fallback={<h3>Loading...</h3>}>
-              <Genie />
-            </Suspense>
-          )}
-        />
-        <Route path="/genie/form" exact component={GenieForm} />
+  
+      
         <Route path="/order/preorder/info" exact component={PreOrderDetails} />
-        <Route
-          path="/genie/order/info"
-          exact
-          render={() => (
-            <Suspense fallback={<h3>Loading...</h3>}>
-              <GenieOrderDetails />
-            </Suspense>
-          )}
-        />
+       
 
         <Route path="/logout" exact component={Logout} />
         <Route

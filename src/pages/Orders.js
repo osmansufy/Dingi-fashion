@@ -25,6 +25,7 @@ const Orders = () => {
          })
          .catch(error=>{
              console.log(error)
+             setLoading(false)
          })
     },[])
     // useEffect(()=>{
@@ -99,7 +100,7 @@ containerCencel= allOrder.length >0 ? allOrder.filter(order=>order.status!=1).ma
     };
     return (<section className="custom_page order">
          <Container> 
-    <Modal.Dialog className="mx-auto my-0 " contentClassName="pt-5">
+    <Modal.Dialog className="mx-auto my-0 " contentClassName="pt-5 bg-secondary-custom">
     
     <Modal.Body >
      <Tab.Container id="left-tabs-example" defaultActiveKey="first">

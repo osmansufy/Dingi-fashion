@@ -3,7 +3,7 @@ import { Nav, Navbar,Dropdown,ButtonGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import UserModal from '../../../UI/Account/UserModal';
 import pro from "../../../assets/img/pro.png";
-import logo from '../../../assets/img/logo-solveaz.png'
+import logo from '../../../assets/img/solveaz.png'
 import offerBlack from "../../../assets/img/offer_black.png";
 import lampIcon from "../../../assets/img/lamp-icon.svg";
 import { useSelector } from 'react-redux';
@@ -99,14 +99,10 @@ const MobileNav=(props) => {
                 <Nav className="mr-auto mobile-nav">
                   <Nav.Link href="#features">
                     {" "}
-                    <Link to="/offers" className="header-bottom-btn">
-                      <img
-                        className="mr-4"
-                        style={{ width: "30px" }}
-                        src={offerBlack}
-                      />
+                    <Link to="/offers" className="header-bottom-btn d-flex align-items: center">
+                    <span className="icon-offer icon mr-3"> </span>
                       {/* <i className="fa fa-percent"></i> */}
-                      <span className="text-success">Offers</span>{" "}
+                      <span className="text-white">Offers</span>{" "}
                     </Link>
                   </Nav.Link>
                   <Nav.Link className="text-dark" href="#pricing">
@@ -115,7 +111,7 @@ const MobileNav=(props) => {
                       width={25}
                       height={22}
                       viewBox="0 0 25 22"
-                      className="mr-4"
+                      className="mr-3"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -126,16 +122,13 @@ const MobileNav=(props) => {
                         fill="#37474F"
                       />
                     </svg>{" "}
-                    <span className="text-success">Wishlist</span>
+                    <span className="text-white">Wishlist</span>
                   </Nav.Link>
 
-                  <Nav.Link className="text-dark">
-                    <img className="mr-4" src={lampIcon} />
-                    <span className="text-success">GeniList</span>
-                  </Nav.Link>
+                 
                   <Nav.Link href="tel:+8809638111444" className="text-dark">
-                    <i className="fa nav-phone fa-phone mr-4" />
-                    <span className="text-success">+8809638111444</span>
+                    <i className="fa nav-phone fa-phone mr-3" />
+                    <span className="text-white">+8809638111444</span>
                   </Nav.Link>
                 </Nav>
               </Navbar.Collapse>

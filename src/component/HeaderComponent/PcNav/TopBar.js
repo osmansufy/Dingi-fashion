@@ -2,7 +2,7 @@ import React, { Component, useState,Suspense } from "react";
 import pro from "../../../assets/img/account.png";
 // import bagIcon from "../../assets/img/bag_24px.svg";
 // import proIcon from "../../assets/img/user_24px.svg";
-import logo from '../../../assets/img/logo-black.png'
+import logo from '../../../assets/img/solveaz.png'
 // import notificationIcon from "../assets/img/svg/notification.svg";
 // import wishlistIcon from "../assets/img/svg/wishlist.svg";
 // import geinieIcon from "../assets/img/lamp-icon.svg";
@@ -82,8 +82,7 @@ const TopBar = (props) => {
                   </Dropdown>
               
              
-                  <Link to="/genie" className="bg-none"> <span className="icon-geinie  "></span>
-                  </Link>
+              
               <span className="icon-wishlist  "></span>
               <span onClick={cartClickHandler} className="icon-bag  "></span>
               {isSignUp ? (
@@ -96,7 +95,8 @@ const TopBar = (props) => {
                         <UserModal />
                       </Dropdown>
                     ): <Button  className="radius-50 " color="warning">
-                   <Link to="/signup">  <img src={uloadIcon} className="mr-1" alt="" />
+                   <Link to="/signup" className="d-flex     align-items-center"> 
+                   <span className="icon-login mr-1"></span>
                     Login </Link>
                   </Button >}
              

@@ -13,6 +13,9 @@
   section {
     padding: 15px 0px;
 }
+.icon-offer{
+  background: var(--icon-color);
+}
 .section-title {
   font-size: 14px;
   font-weight: 500;
@@ -48,6 +51,7 @@
     font-size: 12px;
     border: none;
 }
+
 .bg-custom-warning span,.bg-custom-warning a {
   font-weight: 400;
  
