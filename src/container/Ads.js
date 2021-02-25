@@ -23,11 +23,11 @@ const Ads = (props) => {
         <Container className=" my-5">
         <Carousel controls={false}>
   {carouselItems && carouselItems.filter(item=>item.is_featured_primary).map(item=>(
-    <Carousel.Item interval={2000}>
-  <img src={item.primary_banner} alt=""/>
+    <Carousel.Item as="a" interval={2000}>
+  <img src={item?.primary_banner} alt=""/>
   <div className="image-over-container d-flex flex-column align-items-end">
           
-            <Button color="warning">See Details</Button>
+      
             </div>
   </Carousel.Item>
   )) }

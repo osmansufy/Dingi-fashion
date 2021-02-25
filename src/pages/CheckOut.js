@@ -274,7 +274,7 @@ const sendError=()=>{
                     <label htmlFor="onlinePayment">
                       Online Payment
                       <br />{" "}
-                      <span style={{ fontSize: "10px", color: "#a3a3a3" }}>
+                      <span style={{ fontSize: "10px" }}>
                         Pay with Credit/Debit (Mastercard, Visa etc), Mobile
                         Banking (Bkash, Rocket etc)
                       </span>
@@ -375,7 +375,7 @@ const sendError=()=>{
         </div>
       </div>
       <SuccessModal show={smShow} hide={onAfterOrder}>
-      <p className="bg-light p-2">
+      <p className=" p-2">
         {loading && !isError ? <Spinner />: !loading && isError  ?  
           isError  : 'Your Order has been successfully placed .We will update you shortly'
         }

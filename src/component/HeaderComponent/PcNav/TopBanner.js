@@ -2,15 +2,41 @@ import placeIcon from '../../../assets/img/place_24px.svg'
 import callIcon from '../../../assets/img/call_24px_black.svg'
 import offerBlack from '../../../assets/img/offer.svg'
 import expandIcon from '../../../assets/img/expand_more_24px.svg'
-import React from 'react';
+import React, { Suspense, useState } from 'react';
 import { Container, Dropdown, Row,ButtonGroup } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import Address from '../../../UI/Address/Address';
 import { Link } from 'react-router-dom';
-
+import Sidebar from '../../../container/Sidebar';
+import axios from '../../../axios'
 const TopBanner = (props) => {
     const deleverYaddress = useSelector((state) => state.address.addressCurrent);
     const address = useSelector((state) => state.address.userAddress);
+    const [showSidebar, setShowSidebar] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [categories, setCategories] = useState([]);
+    const getCategories = () => {
+      if (categories.length == 0) {
+        setLoading(true);
+        axios
+          .get("catalogue/category/")
+          .then((response) => {
+            setCategories(response.data);
+            setLoading(false);
+          })
+          .catch((error) => {
+            console.log(error);
+            setLoading(false);
+          });
+      }
+    };
+    const btnClickHandler = () => {
+      setShowSidebar(true);
+      getCategories();
+    };
+    const shideberClosed = () => {
+      setShowSidebar(false);
+    };
     const onDeleveryAddress = () => {
         if (deleverYaddress?.address) {
           return deleverYaddress;
@@ -18,7 +44,7 @@ const TopBanner = (props) => {
           return address[0];
         }
       };
-    return (
+    return (<>
         <Container fluid className="bg-primary d-none d-lg-block">
 <Container>
 
@@ -26,7 +52,7 @@ const TopBanner = (props) => {
 <Row>
     <div className="col-md-4">
         <div   className="d-flex  h-100 align-items-center">
-     <a  onClick={props.categoryClicked} className="d-flex text-dark  h-100 align-items-center">
+     <a  onClick={btnClickHandler} className="d-flex text-dark  h-100 align-items-center">
         <i class="fas fa-bars text-white"></i>    <h5 className="mx-2">Category</h5></a>
                 </div>
     </div>
@@ -67,6 +93,15 @@ const TopBanner = (props) => {
 </Row>
 </Container>
         </Container>
+        <Suspense fallback={<h3>Loading...</h3>}>
+        <Sidebar
+          isLoading={loading}
+          categories={categories}
+          show={showSidebar}
+          closed={shideberClosed}
+        />
+      </Suspense>
+        </>
     );
 };
 

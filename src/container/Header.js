@@ -174,7 +174,7 @@ const Header = (props) => {
   }
   return (
     <>
-      <AppAds hide={appHide} clicked={() => setAppHide(true)} />
+      {/* <AppAds hide={appHide} clicked={() => setAppHide(true)} /> */}
       <header className="sticky-top">
       <PcNav getCategories={getCategories} categories={categories} loading={loading} currentPosition={currentPosition}/>
         

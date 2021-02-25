@@ -7,21 +7,23 @@ import visa from '../assets/img/visa.svg'
 import cashOn from '../assets/img/cashOn.svg'
 import matercard from '../assets/img/matercard.svg'
 import { Link } from 'react-router-dom';
+import ScrollToTop from '../component/ScrollToTop';
 
 function Footer(props) {
-    return (
+    return (<>
       <div className="container-fluid bg-dark">
         <footer className="py-2">
         <div className="container">
           <div className="row my-5">
-            <div className="col-md-3 mt-4 col-sm-6 ">
+            <div className="col-md-4 mt-4 col-sm-6 ">
               <div className="logo justify-content-sm-start justify-content-center">
                 <img src={logo} alt="logo" className="img-fluid" />
               </div>
               <div className="social justify-content-sm-start justify-content-center mt-4">
-                <div className="box">
+                <a href="https://www.facebook.com/solveazbd" target="_blank"> <div className="box">
                   <i className="fa fa-facebook" />
                 </div>
+                </a>
                 <div className="box">
                   <i className="fa fa-twitter" />
                 </div>
@@ -30,42 +32,34 @@ function Footer(props) {
                 </div>
               </div>
             </div>
-            <div className="col-md-3 mt-4 col-6 ">
+            <div className="col-md-4 mt-4 col-6 ">
               <div className="footer-about">
-              <h3>About Daily Plus</h3>
+              <h3>About Solveaz</h3>
               <ul className="mt-3 p-0">
                 <li><Link to="/about"> About US</Link></li>
                 <li><a  >FAQ</a></li>
-                <li><a href="http://dailyplus.store/terms_of_service.html" target="_blank"  >Terms of Services</a></li>
-                <li><a href="http://dailyplus.store/privacy_policy.html" target="_blank"  >Privacy Policy</a></li>
+                <li><Link to="/tearms" >Terms of Services</Link></li>
+                <li><Link to="/privacy"> Privacy Policy</Link></li>
               </ul>
             </div>
             </div>
-            <div className="col-md-3 mt-4 col-6 ">
+            <div className="col-md-4 mt-4 col-6 ">
               <div className="footer-contact">
 
              
               <h3>Contact Us</h3>
               <ul className="mt-3 p-0">
                 <li><a  href="tel:+8809638111444" ><i className="fa fa-phone pr-3" />+8809638111444</a></li>
-                <li><a href="mailto:customers@dailyplus.store" className="d-flex" ><i className="fa fa-envelope pr-3" />demo@solveaz.com</a></li>
-                <li><a><i className="fab fa-facebook-messenger pr-3"></i>Messenger
+                <li><a href="mailto:solveaz@gmail.com" className="d-flex" ><i className="fa fa-envelope pr-3" />solveaz@gmail.com</a></li>
+                <li><a href="https://www.facebook.com/solveazbd" target="_blank"><i className="fab fa-facebook-messenger pr-3"></i>Messenger
                 </a>
                 </li>
-                <li><a><i className="fa fa-map-marker pr-3" />Floor 4, Wakil Tower</a></li>
+                <li><a><i className="fa fa-map-marker pr-3" /> Dhaka , Bangladesh </a></li>
               </ul>
             </div>
             </div>
             <div className="col-md-3 mt-sm-4 col-6 ">
-              <div className="footer-app ">
-
-              
-              <h3>App Download</h3>
-              <ul className="mt-3  p-0">
-                <li className=""><a href="https://play.google.com/store/apps/details?id=com.dingi.dailyplus" target="_blank" ><img className="img-fluid" src={play } alt="app-img" /></a></li>
-                <li><a href="https://apps.apple.com/us/app/id1520548400" target="_blank" ><img className="img-fluid" src={app} alt="true" /></a></li>
-              </ul>
-            </div>
+         
             </div>
             
           </div>
@@ -79,9 +73,9 @@ function Footer(props) {
                 <ul className="d-flex">
               
                   <li className="mr-1 my-1"><a><img src={cashOn} alt="true" /></a></li>
-                  <li className="mr-1 my-1"><a><img src={bkash} alt="true" /></a></li>
+                  {/* <li className="mr-1 my-1"><a><img src={bkash} alt="true" /></a></li>
                   <li className="mr-1 my-1"><a><img src={visa} alt="true" /></a></li>
-                  <li className="mr-1 my-1"><a><img src={matercard}alt="true" /></a></li>    
+                  <li className="mr-1 my-1"><a><img src={matercard}alt="true" /></a></li>     */}
                 </ul>
               </div>
             </div>
@@ -90,6 +84,8 @@ function Footer(props) {
         </div>
       </footer>
       </div>
+      
+      </>
     );
 }
 

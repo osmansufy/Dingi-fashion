@@ -366,9 +366,9 @@ html{
 }
 body{
     
-        position: relative;
+        /* position: relative;
         width: 100vw;
-        overflow-x: hidden;
+        overflow-x: hidden; */
     
 }
 .loging-holder{
@@ -821,14 +821,14 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #FFF;
+    background-color: var(--body-color);
 }
 .order-box{
     padding: 30px 30px;
     /* min-height: 400px;
     max-width: 550px; */
     width: 100%;
-    background-color: #FFF;
+    background-color:var(--body-color);
     -webkit-box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.75);

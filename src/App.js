@@ -36,6 +36,11 @@ import ProductId from "./pages/ProductId";
 
 import ChangePass from "./component/SignUp/ChangePass";
 import Spinner from "./container/Spinner/Spinner";
+import Tearms from "./pages/Tearms";
+import Privacy from "./pages/Privacy";
+
+import ScrollToTop from "./component/ScrollToTop";
+
 const Home = React.lazy(() => import("./pages/Home"));
 // const CategoryPage = React.lazy(() => import("./pages/Category"));
 const SignUp = React.lazy(() => import("./pages/Signup"));
@@ -145,19 +150,24 @@ const App = (props) => {
             </Suspense>
           )}
         />
+        <Route path="/tearms" exact component={Tearms} />
+        <Route path="/privacy" exact component={Privacy} />
       </Switch>
     </Suspense>
   );
-  return (
+  return (<>
     <div className="wrapper">
       <div className="content-wrapper">
         <Header />
-
+      
         {routes}
 
         <Footer />
+        <ScrollToTop />
       </div>
     </div>
+      
+      </>
   );
 };
 

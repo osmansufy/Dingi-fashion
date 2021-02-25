@@ -6,7 +6,7 @@ body {
   font-family: "Poppins", "sans-serif";
   background-color: var(--body-color);
 }
-html,
+
 body {
   height: 100%;
   font-size: 14px;
@@ -22,6 +22,9 @@ svg {
 a {
   cursor: pointer;
   color: var(--text-color);
+}
+.modal-content{
+  background-color: var(--body-color);
 }
 .radius-left{
   border-top-left-radius: var(--border-radius);
@@ -216,11 +219,11 @@ hr {
   border-radius: 20px;
 }
 .custom-card {
-  background: #f9fafa;
+  /* background: #f9fafa; */
   border-radius: 8px;
   display: flex;
   justify-content: center;
-  padding: 50px 0;
+  /* padding: 50px 0; */
   /* height: 255px; */
 }
 .btn.add-to-bag-btn:hover svg path {
@@ -1115,7 +1118,12 @@ section.banner_sec .carousel-item img {
 }
 
 /* Icon */
-
+.icon-scroll{
+  mask:url('../img/backtoTop.svg');
+  background: green;
+  width: 24px;
+  height: 24px;
+}
 .icon {
   mask-size: cover !important;
   mask-repeat: no-repeat;
@@ -1203,8 +1211,12 @@ mask-size: cover;
 .list-category {
   max-height: 445px;
   overflow-y: auto;
+  border-radius: 0;
 }
-
+.list-category-item{
+  background-color: var(--secondary-color);
+    color: #E4CE4C ;
+}
 
 
 .ads-container {
@@ -1242,4 +1254,10 @@ button.banner-button {
   /* right: 10%; */
   left: 10%;
   padding: 20px 0;
+}
+/* Scroll */
+.scroll-to-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }

@@ -9,13 +9,10 @@ const LoadingImage = (props) => {
     }
     return ( <>
          <img 
-         width={props.width}
-         height={props.height}
-         
+   
          src={props.emptyImg} style={ loaded ? {display: "none"} : {}} />
         <img 
-        width={props.width}
-        height={props.height}
+   
         className={props.imageClass} src={props.realImage}
              onLoad={showImage} style={ loaded ? {} : {display: "none"}} />
     </>  );

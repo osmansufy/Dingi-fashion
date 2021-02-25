@@ -49,7 +49,7 @@ const Banner = (props) => {
         <div className="col-md-3 pr-0">
         <ListGroup className="list-category d-lg-block d-none">
  {categories.map(category=>(
-    <ListGroup.Item action onClick={()=>goToCategory(category)} className="d-flex align-items-center justify-content-between">
+    <ListGroup.Item action onClick={()=>goToCategory(category)} className="d-flex list-category-item align-items-center justify-content-between">
       {category.name}<i class="fas fa-chevron-right"></i>
 
       </ListGroup.Item>
@@ -60,10 +60,10 @@ const Banner = (props) => {
         <div className="col-lg-9 mt-2 col-12">
         <Carousel activeIndex={index}  onSelect={handleSelect} nextIcon="" prevIcon="">
     {carouselItems && carouselItems.filter(item=>item.is_featured_secondary).map(item=>(
-      <Carousel.Item key={item.id}>
-      <img src={item.secondary_banner} className="d-block img-fluid w-100" alt="banner-img" />
+      <Carousel.Item as="a" key={item.id}>
+      <img src={item?.secondary_banner} className="d-block img-fluid w-100" alt="banner-img" />
       <div className="banner-image-content">
-      <Button className="banner-button px-4 py-3 text-light" variant="primary">Shop Now</Button>{' '}
+    
       </div>
     </Carousel.Item>
     ))}
