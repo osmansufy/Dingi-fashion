@@ -40,7 +40,7 @@ const CheckOut = (props) => {
     address: "",
     title: "",
     deliveryTime: moment().toISOString(),
-    paymentMethod: 1,
+    // paymentMethod: 1,
     slot: 3,
     promoId:''
   });
@@ -168,12 +168,7 @@ const onDeletePromo=()=>{
        
         setIsError("")
         notificationsCount(token)
-        if (information.paymentMethod == 2) {
-          afterOrderAction();
-          onlinePayment(response.data.final_bill,response.data.id)
-        } else {
-          setloading(false)
-        }
+      
       })
       .catch((error) => {
         setloading(false)
@@ -259,7 +254,7 @@ const sendError=()=>{
             <div className="payment-method mt-4">
               <h6>Payment Method</h6>
               <div className="payment-radio-btn mt-3">
-                <div className="online-payment">
+                {/* <div className="online-payment">
                   <div className="radio-btn">
                     <input
                       type="radio"
@@ -280,16 +275,18 @@ const sendError=()=>{
                       </span>
                     </label>
                   </div>
-                </div>
+                </div> */}
+
                 <div className="cash-delivery">
                   <div className="radio-btn">
                     <input
                       type="radio"
-                      onChange={onMethod}
+                      // onChange={onMethod}
                       id="cashOnDelivery"
                       value="1"
                       name="payment"
-                      checked={information.paymentMethod === 1}
+                      // checked={information.paymentMethod === 1}
+                      checked
                     />
                   </div>
                   <div className="radio-btn-label">

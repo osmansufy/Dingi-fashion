@@ -24,7 +24,7 @@ const SinglePopuler = (props) => {
   const productHandler = (item) => {
     setModalShow(true);
     props.onProductDetails(item);
-
+console.log("category",item);
     onCatProduct(item.category);
   };
 

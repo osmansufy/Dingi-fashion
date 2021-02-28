@@ -89,8 +89,8 @@ const Search = (props) => {
                           <div className="search-result-list-btn-cart d-flex">
                             <i className="fa fa-heart-o mr-2" />
                             <button className="btn search-btn btn-primary mb-1">
-                              <img className="mr-md-3" src={bagIcon} />{" "}
-                              <span className="flex-grow-1">Add</span>{" "}
+                              <img className="mr-md-3" src={bagIcon} />
+                              <span className="flex-grow-1">Add</span>
                             </button>
                           </div>
                         </div>
@@ -130,7 +130,7 @@ const Search = (props) => {
           placeholder="Search Products"
         />
     </div> */}
-      <div class="input-group mb-3 solveaz-search">
+      <div class="input-group ml-4 solveaz-search">
   <div class="input-group-prepend radius-left bg-primary px-4 d-flex align-items-center ">
   <i className="fa fa-search text-white" aria-hidden="true" />
   </div>
