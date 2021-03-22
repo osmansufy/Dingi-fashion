@@ -1,10 +1,10 @@
 :root{
     --primary-color:#1A1A1A;
-    --body-color:#1A1A1A;
+    --body-color:#D7944D;
     --secondary-color:#1A1A1A;
-    --btn-text-color:#D7BC37;
-    --text-color:#D7BC37;
-    --text-color-seconday:#D7BC37;
+    --btn-text-color:#FEF8F4;
+    --text-color:#FEF8F4;
+    --text-color-seconday:#FEF8F4;
     --border-radius:6px;
     --icon-color: #D7BC37;
     --card-bg: #F4F4F5;

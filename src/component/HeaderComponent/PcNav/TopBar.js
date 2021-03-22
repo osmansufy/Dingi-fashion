@@ -2,7 +2,7 @@ import React, { Component, useState,Suspense } from "react";
 import pro from "../../../assets/img/account.png";
 // import bagIcon from "../../assets/img/bag_24px.svg";
 // import proIcon from "../../assets/img/user_24px.svg";
-import logo from '../../../assets/img/logo-black.png'
+import logo from '../../../assets/img/logo-piran.jpg'
 // import notificationIcon from "../assets/img/svg/notification.svg";
 // import wishlistIcon from "../assets/img/svg/wishlist.svg";
 // import geinieIcon from "../assets/img/lamp-icon.svg";

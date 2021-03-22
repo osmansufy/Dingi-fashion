@@ -3,7 +3,7 @@ import { Nav, Navbar,Dropdown,ButtonGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import UserModal from '../../../UI/Account/UserModal';
 import pro from "../../../assets/img/pro.png";
-import logo from '../../../assets/img/logo-black.png'
+import logo from '../../../assets/img/logo-piran.jpg'
 import offerBlack from "../../../assets/img/offer_black.png";
 import lampIcon from "../../../assets/img/lamp-icon.svg";
 import { useSelector } from 'react-redux';
