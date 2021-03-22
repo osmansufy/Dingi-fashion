@@ -131,7 +131,7 @@ const AddAddress = props => {
         </Modal.Footer>
       </Modal.Dialog> 
       </div>
-      <SuccessModal show={smShow} hide={() => setSmShow(false)} >Your Address is Added SuccessFully
+      <SuccessModal show={smShow} hide={() => setSmShow(false)} > <p>Your Address is Added SuccessFully</p>
       <Button onClick={onHome}  className="w-100 mt-3 d-flex align-items-center" variant="primary"><i className="fas fa-arrow-left"></i><span className="flex-grow-1"> Go Back </span></Button>
       
       </SuccessModal>

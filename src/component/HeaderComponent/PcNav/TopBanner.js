@@ -45,7 +45,7 @@ const TopBanner = (props) => {
         }
       };
     return (<>
-        <Container fluid className="bg-primary d-none d-lg-block">
+        <Container fluid className="bg-dark d-none d-lg-block">
 <Container>
 
 
@@ -53,7 +53,7 @@ const TopBanner = (props) => {
     <div className="col-md-4">
         <div   className="d-flex  h-100 align-items-center">
      <a  onClick={btnClickHandler} className="d-flex text-dark  h-100 align-items-center">
-        <i class="fas fa-bars text-white"></i>    <h5 className="mx-2">Category</h5></a>
+        <i class="fas fa-bars text-custom-primary"></i>    <h5 className="mx-2">Category</h5></a>
                 </div>
     </div>
     <div className="col-md-8">
@@ -70,10 +70,10 @@ const TopBanner = (props) => {
             <h5>+880 9638-111444</h5>
             </a>
         </div>
-        <Dropdown as="div" title="User ">
+        <Dropdown as="div"  title="User ">
                   <Dropdown.Toggle
                     id="dropdown-custom-1"
-                    className="address-button custom-dropdown"
+                    className="address-button custom-dropdown border-0"
                   >
         <div className="deleveryAddress  ml-4 d-flex align-items-center">
             <span className="icon-place mr-2"></span>
@@ -85,7 +85,7 @@ const TopBanner = (props) => {
                    </div>
             </div>
             </div>
-            </Dropdown.Toggle>
+            </Dropdown.Toggle >
             <Address onCurrent={props.currentPosition} />
             </Dropdown>
         </div>

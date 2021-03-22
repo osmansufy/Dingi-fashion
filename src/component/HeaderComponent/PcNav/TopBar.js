@@ -2,7 +2,7 @@ import React, { Component, useState,Suspense } from "react";
 import pro from "../../../assets/img/account.png";
 // import bagIcon from "../../assets/img/bag_24px.svg";
 // import proIcon from "../../assets/img/user_24px.svg";
-import logo from '../../../assets/img/solveaz.png'
+import logo from '../../../assets/img/logo-black.png'
 // import notificationIcon from "../assets/img/svg/notification.svg";
 // import wishlistIcon from "../assets/img/svg/wishlist.svg";
 // import geinieIcon from "../assets/img/lamp-icon.svg";
@@ -71,7 +71,7 @@ const TopBar = (props) => {
                     title="Dropdown "
                   >
 
-<Dropdown.Toggle id="dropdown-custom-1"><span className="icon-notification icon "></span></Dropdown.Toggle>
+<Dropdown.Toggle id="dropdown-custom-1" className="border-0"><span className="icon-notification icon "></span></Dropdown.Toggle>
 <Suspense fallback={<h4>Loading...</h4>}>
                       <Notification
                         show={notishow}
@@ -86,10 +86,9 @@ const TopBar = (props) => {
               <span className="icon-wishlist  "></span>
               <span onClick={cartClickHandler} className="icon-bag  "></span>
               {isSignUp ? (
-                      <Dropdown as={ButtonGroup} title="Dropdown ">
-                        <Dropdown.Toggle id="dropdown-custom-1">
-                          {/* <i className="fas fa-user"></i> */}
-                          <img src={pro} />
+                      <Dropdown as={ButtonGroup} title="Dropdown " >
+                        <Dropdown.Toggle id="dropdown-custom-1" className="border-0">
+                        <i className="far text-custom-primary h4 m-0 fa-user"></i>
                         </Dropdown.Toggle>
 
                         <UserModal />

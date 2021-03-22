@@ -8,7 +8,7 @@ import { Redirect, useHistory, withRouter } from "react-router-dom";
 import * as authAction from "../store/actions/actionAuth";
 import * as addressAction from "../store/actions/actionAddress";
 import * as actionsCart from "../store/actions/actionCart";
-import offerIcon from "../assets/img/offer_24px.png";
+import offerIcon from "../assets/img/svg/offer_24px.svg";
 import SuccessModal from "../UI/Modal/SuccessModal";
 import Spinner from '../container/Spinner/Spinner'
 import ErrorToast from "../UI/Toasts/Toast";
@@ -165,7 +165,7 @@ const onDeletePromo=()=>{
         console.log(response);
         console.log('orderSend',orderSend);
         CartChange(token);
-       
+        setloading(false)
         setIsError("")
         notificationsCount(token)
       
@@ -323,8 +323,14 @@ const sendError=()=>{
                 variant="success"
                 id="dropdown-basic"
               >
-                <h6>
-                  <img src={offerIcon} className="mr-2" alt="true" /> Add Promo Code{" "}
+                <h6 className="d-flex align-items-center justify-content-between">
+                  <div className="d-flex align-items-center "> 
+                  <span className="icon-offer icon mr-2"></span>
+                  {/* <img src={offerIcon} className="mr-2" alt="true" /> */}
+                  {/* <i class="fa fa-badge-percent"></i> */}
+                   Add Promo Code{" "}
+                   </div>
+                 
                   <span className="float-right">
                     <i className="fa fa-angle-right" />
                   </span>
@@ -334,7 +340,7 @@ const sendError=()=>{
               <Dropdown.Menu className="p-3">
 
                 <h6 className="text-center"> Add Promo Code</h6>
-                <input className="mx-auto w-100 " value={promo} onChange={(e)=>setPromo(e.target.value)} type="text" />
+                <input className="mx-auto w-100 border" value={promo} onChange={(e)=>setPromo(e.target.value)} type="text" />
                 <Dropdown.Item >
                
                 <button disabled={!promo} onClick={onPromoSubmit} className="btn w-100 mt-2 mx-auto btn-primary">

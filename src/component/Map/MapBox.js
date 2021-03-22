@@ -52,14 +52,14 @@ const history=useHistory()
     }
  
     const getReverseGeoCode=(latitude,longitude)=>{
-      axios.get(`https://api.dailyplus.store/v0/location/geocode/reverse/?lat=${latitude}&lng=${longitude}&lang=en`,{
+      axios.get(`${baseURL}/v0/location/geocode/reverse/?lat=${latitude}&lng=${longitude}&lang=en`,{
         headers: {
           Authorization: `JWT ${userToken}`,
           "Content-Type": "application/json"
         }
       })
       .then(response=>{
-        console.log(response)
+        console.log("reverce",response.data.result.address)
         setSearchEnter(response.data.result.address)
       })
       .catch(error=>{
@@ -97,7 +97,7 @@ const history=useHistory()
    
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
-      style: "http://tilesv3.dingi.live/styles/Combined-Bangla/style.json",
+      style: config.DINGI_MAP_BN,
       center: [lng, lat],
       zoom: zoom,
     });
@@ -281,7 +281,7 @@ marker.on('dragend', ()=>onDragEnd(marker));
     // name="query"
     defaultValue={searchEnter}
     // ref={inputRef}
-    // value={query}
+    // value={searchEnter}
     // onChange={(event)=>setSearchEnter(event.target.value)}
     onChange={onInputChange}
     className="form-control"

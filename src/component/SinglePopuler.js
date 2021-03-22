@@ -123,7 +123,7 @@ console.log("category",item);
           <p>{props?.data?.description}</p>
         </div>
           <div className="price">
-            <h6 className="sell-price text-dark font-weight-bold">
+            <h6 className="sell-price  font-weight-bold">
             ৳{props.data.inventory_list[0].unit_price_final}{" "}
               <span className="regular-price">
                 {props.data?.inventory_list[0]?.discount

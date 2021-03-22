@@ -65,7 +65,11 @@ a.times.mr-3.active.disabled {
 }
 .form-control:focus {
   box-shadow: none;
+  background-color: var(--secondary-color);
+  color: var(--text-color-seconday);
+  border-color:var(--btn-text-color)
 }
+
 .modal-content {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
@@ -237,7 +241,7 @@ hr {
   align-items: center;
   background-color: var(--secondary-color);
   width: 220px;
-  color: #fff !important;
+  color: var(--text-color) !important;
 }
 .main-sidebar {
   position: fixed;
@@ -272,7 +276,7 @@ hr {
   opacity: 0.2;
 }
 .product-card .pro-title {
-  color: #37474f;
+  color: var(--text-color);
   height: 35px;
 
   font-size: 12px;
@@ -378,7 +382,7 @@ Notification
 .notification-checked {
   color: #16181b;
   text-decoration: none;
-  background-color: #81ce11;
+  /* background-color: #81ce11; */
 }
 a.notification-list h6 {
   display: flex;
@@ -405,28 +409,25 @@ a.notification-list h6 span {
 .cart_subtotal p,
 .delevery_fee p,
 .cart_total p {
-  font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
-  letter-spacing: 0em;
-  text-align: left;
+
 }
 .cart_subtotal span,
 .delevery_fee span,
 .cart_total span {
-  font-family: Poppins;
+
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 21px;
-  letter-spacing: 0em;
-  text-align: right;
-  color: #37474f;
+
+
+
 }
 .cart_total_price .btn {
-  color: #ffffff;
+  color: var(--text-color);
   background-color: var(--primary-color);
   margin-top: 20px;
 }
@@ -450,7 +451,7 @@ CheckOut
   background-color: var(--primary-color) !important;
   font-style: normal;
   text-align: center;
-  color: #ffff;
+  color: var(--text-color);
   border-radius: 8px;
 }
 .date-container .nav-link {
@@ -461,7 +462,7 @@ CheckOut
   line-height: 18px;
   letter-spacing: 0em;
   text-align: center;
-  color: #ffff;
+  color: var(--text-color);
 }
 .date-container .nav-link p,
 .date-container .nav-link h4 {
@@ -478,7 +479,7 @@ CheckOut
 }
 .date-container .nav-link.active p,
 .date-container .nav-link.active h4 {
-  color: #fff;
+  color: var(--text-color);
   font-size: 14px;
 }
 /* .date-container .nav-link {
@@ -568,7 +569,7 @@ i.fas.fa-user {
   color: #37474f;
 }
 .row.order-info {
-  background: #fff;
+  background: var(--text-color);
   display: flex;
 
   border-bottom: 1px solid #e1e1e1;
@@ -605,8 +606,8 @@ i.fas.fa-user {
   line-height: 18px;
   letter-spacing: 0em;
   text-align: left;
-  color: rgba(55, 71, 79, 0.72);
-  color: rgba(94, 196, 1, 1);
+  color: var(--text-color);
+  
 }
 
 .oInfo {
@@ -632,7 +633,7 @@ i.fas.fa-user {
   line-height: 24px;
   /* letter-spacing: 0.10000000149011612px; */
   /* text-align: center; */
-  color: rgba(55, 71, 79, 0.72);
+  color: var(--text-color);
   outline: 0;
 }
 .order .nav-item {
@@ -651,12 +652,12 @@ i.fas.fa-user {
   align-items: center;
   text-align: center;
   letter-spacing: 0.1px;
-  color: #5ec401;
+  color: var(--text-color);
   mix-blend-mode: normal;
   /* opacity: 0.87; */
   background: transparent;
 
-  border-bottom: 1px solid #5ec401;
+  border-bottom: 1px solid var(--text-color);
 }
 .row.order-info span {
   font-family: Poppins;
@@ -667,7 +668,7 @@ i.fas.fa-user {
   letter-spacing: 0px;
   flex: 0.8;
   text-align: right;
-  color: #f37a20;
+  color: var(--text-color);
 }
 .info-left {
   display: flex;
@@ -675,13 +676,11 @@ i.fas.fa-user {
 }
 
 .ongoing p {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
+
   font-size: 14px;
   line-height: 21px;
   text-align: center;
-  color: rgba(55, 71, 79, 0.72);
+  color: var(--text-color);
 }
 .nav-tabs > .focus > a,
 .nav-tabs > .active > a::-moz-focus-inner {
@@ -711,7 +710,7 @@ i.fas.fa-user {
   font-size: 14px;
   line-height: 21px;
 
-  color: #37474f;
+  color: var(--text-color);
 
   flex-grow: 0;
   margin: 0px 2px;
@@ -733,7 +732,7 @@ h5.address-status {
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
-  color: rgba(55, 71, 79, 0.72);
+  color: var(--text-color);
 
   margin: 0px 2px;
 }
@@ -764,7 +763,7 @@ h5.address-status {
   left: 0;
   margin: 12px;
   background-color: #404040;
-  color: #ffffff;
+  color: var(--text-color);
   z-index: 1 !important;
   padding: 6px;
   font-weight: bold;
@@ -783,7 +782,7 @@ h5.address-status {
 }
 
 .time-container .times.active p {
-  color: #fff;
+  color: var(--text-color);
 }
 
 .time-container .times.active {
@@ -802,7 +801,7 @@ h5.address-status {
 
   text-align: center;
 
-  color: #37474f;
+  color: var(--text-color);
 }
 .custom_page.Success {
   margin-bottom: 40px;
@@ -817,7 +816,7 @@ button#dropdown-custom-2 {
   margin: 0;
 }
 button#dropdown-custom-2 i {
-  color: #000;
+  color: var(--text-color);
 }
 .address-button {
   padding: 0 !important;
@@ -875,8 +874,7 @@ button#dropdown-custom-2 i {
   /* width: 100%; */
   margin-bottom: 0;
   line-height: 1.5;
-  color: rgb;
-  color: rgba(55, 71, 79, 0.54);
+  color: var(--text-color);
   pointer-events: none;
   font-weight: 400 !important;
   cursor: text;
@@ -914,12 +912,12 @@ button#dropdown-custom-2 i {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   font-size: 12px;
-  color: #5ec401;
+  color: var(--text-color);
   font-weight: 700;
   font-family: Poppins;
 }
 .form-label-group:focus-within {
-  border-bottom: 2px solid #5ec401;
+  border-bottom: 2px solid var(--text-color);
 }
 .inBR {
   border-radius: 0 8px 8px 0 !important;
@@ -944,7 +942,7 @@ button#dropdown-custom-2 i {
   font-size: 16px;
   line-height: 21px; */
   text-align: center;
-  color: rgba(55, 71, 79, 0.72);
+  color: var(--text-color);
   /* max-width: 343px; */
   margin: 20px 0;
   font-size: 14px;
@@ -964,7 +962,7 @@ button#dropdown-custom-2 i {
 
 .slick-prev:before,
 .slick-next:before {
-  color: #000 !important;
+  color: var(--text-color)!important;
 }
 
 /*About Page*/
@@ -974,13 +972,13 @@ button#dropdown-custom-2 i {
 }
 
 .about-banner-info h2 {
-  color: #fff;
+  color: var(--text-color);
   font-weight: 700;
   text-align: left;
 }
 
 .about-banner-info p {
-  color: #fff;
+  color: var(--text-color);
 }
 
 .features-wrapper {
@@ -1021,7 +1019,7 @@ h5.preOrderDate {
   background-color: rgba(94, 196, 1, 0.2);
   /* padding: 10px 10px; */
   font-size: 12px;
-  color: #5ec401;
+  color: var(--text-color);
   border-radius: 8px;
   text-align: center;
   line-height: 1.8;
@@ -1036,7 +1034,7 @@ p.prePoduct-unit {
   line-height: 1.8;
 }
 p.sell-price {
-  color: #fe903f;
+  color: var(--text-color);
   font-weight: 600;
 }
 
@@ -1050,7 +1048,7 @@ p.sell-price {
   color: var(--text-color);
 }
 .linkBrand.active {
-  color: var(--primary-color) !important;
+  color: var(--text-color) !important;
   background-color: transparent !important;
   position: relative;
   padding-bottom: 5px !important;
@@ -1060,7 +1058,7 @@ p.sell-price {
   content: "";
   position: absolute;
   width: 45%;
-  background-color: #5EC401;
+  background-color: var(--text-color);
   height: 1px;
   top: 100%;
   left: 0;
@@ -1072,7 +1070,7 @@ p.sell-price {
   border-radius: 50px;
 }
 h5.subName {
-  color: rgba(55, 71, 79, 0.54);
+  color: var(--text-color);
 }
 /* Category Page */
 .phone-category{
@@ -1091,7 +1089,7 @@ h5.subName {
 }
 .phone-brand .nav-link {
   text-align: center;
-  background-color: #f0f1f2;
+  background-color: var(--text-color);
 }
 .phone-brand .nav-item,
 .phone-category .nav-item {
@@ -1100,13 +1098,13 @@ h5.subName {
 
 
 .phone-brand .nav-pills .nav-link.active {
-  background-color:  #5EC401;
+  background-color:  var(--text-color);
 }
 .phone-category a,
 .phone-brand a {
   font-size: 7px;
   font-weight: 600;
-  color: rgba(55, 71, 79, 0.72);
+  color: var(--text-color);
 }
 .brandFilterWrapper {
   max-height: 200px;
@@ -1124,6 +1122,7 @@ section.banner_sec .carousel-item img {
   width: 24px;
   height: 24px;
 }
+
 .icon {
   mask-size: cover !important;
   mask-repeat: no-repeat;
@@ -1131,25 +1130,25 @@ section.banner_sec .carousel-item img {
 }
 .icon-phone{
   mask: url('../img/call_24px.svg');
-background: #fff;
+background: var(--text-color);
   width: 24px;
   height: 24px;
 }
 .icon-place{
   mask: url('../img/place_24px.svg');
-background: #fff;
+background: var(--text-color);
   width: 24px;
   height: 24px;
 }
 .button-arrow{
   mask: url('../img/expand_more_24px.svg');
-  background: #fff;
+  background: var(--text-color);
   width: 24px;
   height: 24px;
 }
 .icon-offer{
   mask: url('../img/offer.svg');
-background: #fff;
+background: var(--text-color);
   width: 24px;
   height: 24px;
 }
@@ -1158,7 +1157,7 @@ background: #fff;
   display: inline-block;
   width: 25px;
   height: 32px;
-  background: black;
+  background: var(--text-color);
 
 }
 .icon-geinie {
@@ -1166,20 +1165,20 @@ background: #fff;
   mask: url('../img/lamp-icon.svg');
   width: 35px;
   height: 32px;
-  background: black;
+  background: var(--text-color);
   mask-size: cover !important;
 }
 .icon-login{
   display: inline-block;
   width:22px; 
   height:22px;
-  background: white;
+  background: var(--text-color);
   mask-size: cover !important;
   mask:url('../img/upload.svg');
   mask-repeat: no-repeat;
 }
 .icon-wishlist {
-  background: black;
+  background: var(--text-color);
   mask-size: cover !important;
   width: 32px;
   height: 27px;
@@ -1187,7 +1186,7 @@ background: #fff;
   
 }
 .icon-bag {
-  background: black;
+  background: var(--text-color);
   mask-size: cover !important;
   width: 30px;
   height: 35px;
@@ -1202,7 +1201,7 @@ mask: url('../img/cart.svg');
 display: inline-block;
 width: 24px;
 height: 24px;
-background: #ffff; 
+background: var(--text-color); 
 mask-size: cover;
 
 
@@ -1233,7 +1232,7 @@ mask-size: cover;
 /* Footer */
 
 footer ul li,footer ul li a ,footer  h3,footer  h5,footer  p{
-  color: #ffff;
+  color: var(--text-color);
 }
 footer .fa ,footer .fab{
   color: #D7944D;
@@ -1261,3 +1260,4 @@ button.banner-button {
   bottom: 0;
   right: 0;
 }
+

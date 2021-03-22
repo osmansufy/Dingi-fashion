@@ -14,7 +14,7 @@ function ErrorToast(props) {
       left: 0,
     }}
   >
-    <Toast className="bg-warning" show={props.showA} onClose={props.close}>
+    <Toast className="bg-primary" show={props.showA} onClose={props.close}>
    
       <Toast.Body>{props.children} </Toast.Body>
     </Toast>

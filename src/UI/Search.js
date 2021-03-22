@@ -130,9 +130,9 @@ const Search = (props) => {
           placeholder="Search Products"
         />
     </div> */}
-      <div class="input-group ml-4 solveaz-search">
-  <div class="input-group-prepend radius-left bg-primary px-4 d-flex align-items-center ">
-  <i className="fa fa-search text-white" aria-hidden="true" />
+      <div className="input-group ml-md-4 solveaz-search">
+  <div className="input-group-prepend radius-left bg-primary px-4 d-flex align-items-center ">
+  <i className="fa fa-search text-custom-primary" aria-hidden="true" />
   </div>
   <input className=" form-control radius-right my-0 py-md-1 border-0 "
           ref={inputRef}
