@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#header-footer
+/src/container/Header.js
+/src/container/Footer.js
